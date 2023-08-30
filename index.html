@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>G-calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container mt-2 " >
+    <div class="row justify-content-center">
+      <h1>Calculate Your Percentage</h1>
+    </div>
+    <div class="row justify-content-between" id="col">
+      <div class="col-sm-5 mb-2 mt-2 p-3" >
+        <center style="font-weight: bold; background-color: darkcyan; color: #fff;">Enter Your Marks</center>
+      <hr>
+
+      <div class="form-group">
+     
+      <input type="number" class="form-control" id="sub1" placeholder="Science-marks">
+      </div>
+      <div class="form-group">
+ 
+      <input type="number" class="form-control" id="sub2" placeholder="Math-marks">
+      </div>
+      <div class="form-group">
+      
+      <input type="number" class="form-control" id="sub3" placeholder="Optional-marks">
+      </div>
+      <div class="form-group">
+    
+      <input type="number" class="form-control" id="sub4" placeholder="Social-marks">
+      </div>
+      <div class="form-group">
+     
+      <input type="number" class="form-control" id="sub5" placeholder="Nepali-marks">
+      </div>
+      <div class="form-group">
+       
+      <input type="number" class="form-control" id="sub6" placeholder="computer-marks">
+      </div>
+       <div class="form-group">
+       
+      <input type="number" class="form-control" id="sub7" placeholder="Health-marks">
+      </div>
+       <div class="form-group">
+       
+      <input type="number" class="form-control" id="sub8" placeholder="English-marks">
+      </div>
+
+
+          
+   <button class="btn btn-success mb-2" onclick="calcy()">Calculate Percentage</button>
+    
+ 
+ 
+      </div>
+       <div class="col-sm-5   mr-auto mt-4 mb-4 " >
+      
+     <div class="results">
+      <center style="font-weight: bold; background-color: darkcyan; color: #fff;">Results</center>
+      <hr>
+       <table class="table table-bordered table-sm">
+         <tr>
+           <td>Total Marks:-</td>
+           <td>800</td>
+         </tr>
+          <tr>
+           <td>Marks Obtained:-</td>
+           <td id="total"></td>
+         </tr>
+          <tr>
+           <td>Percentage:-</td>
+           <td id="percent"></td>
+         </tr>
+         <tr>
+           <td>Remarks:-</td>
+           <td id="remarks"></td>
+         </tr>
+       </table>
+     </div>
+      </div>
+      
+    </div>
+
+    
+  </div>
+
+   <script type="text/javascript">
+    function calcy()
+   
+       {
+        var a=parseInt(document.getElementById('sub1').value);
+        var b=parseInt(document.getElementById('sub2').value);
+        var c=parseInt(document.getElementById('sub3').value);
+        var d=parseInt(document.getElementById('sub4').value);
+        var e=parseInt(document.getElementById('sub5').value);
+        var f=parseInt(document.getElementById('sub6').value);
+        var g=parseInt(document.getElementById('sub7').value);
+        var h=parseInt(document.getElementById('sub8').value);
+        
+            if(a>100 || b>100 || c>100 || d>100 || e>100 || f>100 || g>100 || h>100)
+        {
+            alert("please enter valid marks");
+        }
+        else{
+               var total_marks = a+b+c+d+e+f+g+h;
+               document.getElementById("total").innerHTML=total_marks;
+               var per = total_marks/800*100;
+               document.getElementById("percent").innerHTML=per;
+
+               if(a>39 && b>39 && c>39 && d>39 && e>39 && f>39 && g>39 && h>39)
+               {
+                 document.getElementById("remarks").innerHTML="<span style='color:green'>Pass</span>";
+
+               }
+               else
+               {
+                  document.getElementById("remarks").innerHTML="<span style='color:red'>Fail</span>";
+               }
+        }
+       
+       }
+
+  </script>
+
+ </body>
+ </html> 

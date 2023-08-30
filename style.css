@@ -1,0 +1,11 @@
+#col{
+	border: 2px solid #000;
+} 
+.form-group{
+	border-bottom: 2px solid lightgreen;
+	 overflow: hidden;
+}
+.form-group input{
+	border: none;
+	outline: none;
+}
